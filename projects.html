@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>projects</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css'>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="description" content="the official website of M. Shahrim" />
+</head>
+
+<body>
+    <main class="main-padding">
+
+        <!-- HEADER SECTION -->
+        <nav>
+            <a href="/" class="a-menu">Home</a>
+            <a href="projects.html" class="a-menu">Projects</a>
+            <a href="https://blog.mohdshahrim.com" class="a-menu">Blog</a>
+            <a href="snippets.html" class="a-menu">Snippets</a>
+        </nav>
+        <br>
+        <br>
+        <h1>Projects</h1>
+        <p class="p-about">More to come soon</p>
+        <br>
+        <br>
+        <br>
+        <h3>php-rat</h3>
+        <p>A simple remote access tool (RAT) for PHP. My naive attempt to learn and apply a RAT in PHP web. Only Windows-based environment has been produced. FOR LEARNING PURPOSE ONLY.</p>
+        <img src="img/phprat_01.png" width="40%" style="margin-right: 1em;">
+        <p>Source code can be found here <a href="https://github.com/mohdshahrim/php-rat">https://github.com/mohdshahrim/php-rat</a></p>
+        <br>
+        <br>
+        <br>
+        <h3>ClaimMaker</h3>
+        <p>A web application built on top of CodeIgniter 4. It is used to generate a PDF file of claim submission form. See demo here <a href="https://claimmaker.mohdshahrim.com/">https://claimmaker.mohdshahrim.com/</a></p>
+        <img src="img/claimmaker_01.PNG" width="40%" style="margin-right: 1em;">
+        <img src="img/claimmaker_02.PNG" width="40%">
+        <p>Source code can be found here <a href="https://github.com/mohdshahrim/claimmaker-demo">https://github.com/mohdshahrim/claimmaker-demo</a></p>
+    </main>
+</body>
+<style>
+    @media only screen  and (max-device-width: 1000px) and (orientation: portrait) {
+        .main-padding {
+            padding-left: 10px;
+        }
+        .profile > img {
+            transform: scale(0.9);
+        }
+    }
+    .simple-message {
+        color: #f0f1f2;
+        background-color: #3f4042!important;
+        border: 1px dotted #6e7072;
+        padding: 1em;
+        border-radius: 10px;
+        position: relative;
+    }
+    .simple-message-close {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+    }
+    .p-about {
+        color: #aaa;
+        display: block;
+        margin: 10px 0;
+        line-height: 0.8em;
+    }
+    .header {
+        display: flex;
+        padding-top: 50px;
+    }
+    .a-menu {
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 1em;
+        color: #f0f1f2;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.2em;
+    }
+    .profile {
+        flex: 1;
+        max-width: fit-content;
+        padding-right: 10px;
+    }
+    .profile img {
+        border-radius: 50%;
+    }
+    .caption {
+        flex: 1;
+    }
+    .footer-pad {
+        padding: 50px;
+    }
+    .footer-pad-text {
+        font-size: 0.8em;
+        text-align: center;
+        line-height: normal;
+    }
+</style>
+
+</html>
