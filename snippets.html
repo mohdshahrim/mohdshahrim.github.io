@@ -2,123 +2,171 @@
 <html lang='en'>
 
 <head>
-    <title>snippets</title>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css'>
-    <link rel="stylesheet" href="style.css">
+    <title>mohdshahrim.com</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta name="description" content="the official website of M. Shahrim" />
 </head>
 
-<body>
-    <main class="main-padding">
 
-        <!-- HEADER SECTION -->
-        <nav>
-            <a href="/" class="a-menu">Home</a>
-            <a href="projects.html" class="a-menu">Projects</a>
-            <a href="https://blog.mohdshahrim.com" class="a-menu">Blog</a>
-            <a href="snippets.html" class="a-menu">Snippets</a>
-        </nav>
-        <br>
-        <br>
-        <h1>Snippets</h1>
-        <p class="p-about">snippets of command or code that I considered useful</p>
-        <p class="p-about">cmd = Windows Command Prompt</p>
-        <p class="p-about">terminal = Linux Terminal</p>
-        <br>
-        <h4>Search files faster (cmd)</h4>
-        <code>dir "\search term*" /s</code>
-        <br>
-        <br>
-        <h4>List out running Services (cmd)</h4>
-        <code>net start</code>
-        <br>
-        <br>
-        <h4>Generate hash of a file (cmd)</h4>
-        <code>certutil -hashfile "C:\Users\Administrator\Desktop\tehee.txt" sha256</code>
-        <br>
-        <br>
-        <h4>Find system boot time (cmd)</h4>
-        <code>systeminfo|find "Boot Time"</code>
-        <br>
-        <br>
-        <h4>Install specific Laravel (cmd)</h4>
-        <code>composer create-project laravel/laravel="8.6.12" myproject</code>
-        <br>
-        <br>
-        <h4>Echoing text to file without quotes (cmd)</h4>
-        <code>echo|set /p="Hello" > test.txt</code>
-        <br>
-        <br>
-        <h4>Displaying current directory (cmd)</h4>
-        <code>echo %cd%</code>
-        <br>
-        <br>
-    </main>
-    <footer> <a href="#">Back to top ⬆</a> </footer>
-</body>
 <style>
-    @media only screen  and (max-device-width: 1000px) and (orientation: portrait) {
-        .main-padding {
-            padding-left: 10px;
-        }
-        .profile > img {
-            transform: scale(0.9);
-        }
+    p {
+        font-size: 0.9em;
     }
-    .simple-message {
-        color: #f0f1f2;
-        background-color: #3f4042!important;
-        border: 1px dotted #6e7072;
-        padding: 1em;
-        border-radius: 10px;
-        position: relative;
-    }
-    .simple-message-close {
-        position: absolute;
-        top: 30px;
-        right: 10px;
-    }
-    .p-about {
-        color: #aaa;
-        display: block;
-        margin: 10px 0;
-        line-height: 0.8em;
-    }
-    .header {
-        display: flex;
-        padding-top: 50px;
-    }
-    .a-menu {
-        font-weight: bold;
-        display: inline-block;
-        margin-right: 1em;
-        color: #f0f1f2;
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 0.2em;
-    }
-    .profile {
-        flex: 1;
-        max-width: fit-content;
-        padding-right: 10px;
-    }
-    .profile img {
-        border-radius: 50%;
-    }
-    .caption {
-        flex: 1;
-    }
-    .footer-pad {
-        padding: 50px;
-    }
-    .footer-pad-text {
-        font-size: 0.8em;
+    header {
+        padding: 10px;
         text-align: center;
-        line-height: normal;
+    }
+
+    .content {
+        max-width: 600px;
+        margin: 5px auto;
+        padding: 5px 20px;
+    }
+    .text-header {
+        font-size: 1.5em;
+        margin-bottom:0;
+    }
+    .text-subheader {
+        font-size: 0.8em;
+    }
+    .p-linkbar {
+        font-size: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+    .span-link {
+        font-size: 1.3em;
+        margin-right:0.5em;
+        margin-left:0.5em;
+    }
+    .a-link:link {
+        color: red;
+    }
+    .a-link:visited {
+        color: red;
+    }
+    .p-title {
+        font-size: 0.8em;
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0.8em 0.5em;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+    .spacer {
+        height: 100px;
+        clear: both;
+    }
+    .p-snippet {
+        margin-bottom: 8px;
+    }
+    .code-snippet {
+        border-radius: 5px;
+        background-color: #cbd5e1;
+        padding: 0.5em;
+        display: block;
+    }
+
+
+
+    /* when screen is at least 600px, upscale every elements */
+    @media (min-width: 600px) {
+        p {
+            font-size: 125%;
+        }
+        .text-header {
+            font-size: 2.5em;
+            margin-bottom:0;
+        }
+        .text-subheader {
+            font-size: 1em;
+        }
+        .content {
+            padding: 40px 40px 20px 40px;
+        }
+        .p-title {
+            font-size: 100%;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0.8em 0.5em;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
     }
 </style>
+
+
+<body>
+    <main>
+        <header>
+            <h1 class="text-header">Mohamad Shahrim</h1>
+            <p class="text-subheader">a programmer from Sibu, Sarawak</p>
+        </header>
+
+        <div class="content">
+            <p class="p-linkbar">
+                <span class="span-link"><a class="a-link" href="/">home</a></span>
+                <span class="span-link"><a class="a-link" href="/">projects</a></span>
+                <span class="span-link"><a class="a-link" href="/snippets.html">snippets</a></span>
+            </p>
+        </div>
+        <div class="content">
+            <h3 style="font-family: Arial, Helvetica, sans-serif; margin-bottom: 0px;">SNIPPETS</h3>
+            <p>snippets of command or code that I considered useful</p>
+        </div>
+
+        <div class="content">
+            <p class="p-snippet">search files faster</p>
+            <code class="code-snippet">dir "\searchterm" /s</code>
+
+            <br>
+            <br>
+
+            <p class="p-snippet">list out running services</p>
+            <code class="code-snippet">net start</code>
+
+            <br>
+            <br>
+
+            <p class="p-snippet">generate hash of a file</p>
+            <code class="code-snippet">certutil -hashfile "C:\Users\Administrator\Desktop\tehee.txt" sha256</code>
+
+            <br>
+            <br>
+
+            <p class="p-snippet">find system boot time</p>
+            <code class="code-snippet">systeminfo|find "Boot Time"</code>
+
+            <br>
+            <br>
+
+            <p class="p-snippet">install specific Laravel</p>
+            <code class="code-snippet">composer create-project laravel/laravel="8.6.12" myproject</code>
+            
+            <br>
+            <br>
+
+            <p class="p-snippet">echoing text to file without quotes</p>
+            <code class="code-snippet">echo|set /p="Hello" > test.txt</code>
+
+            <br>
+            <br>
+
+            <p class="p-snippet">display current directory</p>
+            <code class="code-snippet">echo %cd%</code>
+        </div>
+
+        <div class="spacer"></div>
+    </main>
+</body>
+
+
+<script>
+
+</script>
+
 
 </html>
