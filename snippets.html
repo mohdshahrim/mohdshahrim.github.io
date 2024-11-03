@@ -59,14 +59,22 @@
         height: 100px;
         clear: both;
     }
+    .div-snippet {
+        margin: 2.2em 0;
+    }
     .p-snippet {
         margin-bottom: 8px;
+    }
+    .p-or {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
     }
     .code-snippet {
         border-radius: 5px;
         background-color: #cbd5e1;
         padding: 0.5em;
         display: block;
+        word-break: break-all;
     }
 
 
@@ -115,48 +123,79 @@
         </div>
         <div class="content">
             <h3 style="font-family: Arial, Helvetica, sans-serif; margin-bottom: 0px;">SNIPPETS</h3>
-            <p>snippets of command or code that I considered useful</p>
+            <p>snippets of command or code that I consider useful</p>
         </div>
 
         <div class="content">
-            <p class="p-snippet">search files faster</p>
-            <code class="code-snippet">dir "\searchterm" /s</code>
+            <div class="div-snippet">
+                <p class="p-snippet">search files faster</p>
+                <code class="code-snippet">dir "\searchterm" /s</code>
+            </div>
 
-            <br>
-            <br>
+            <div class="div-snippet">
+                <p class="p-snippet">list out running services</p>
+                <code class="code-snippet">net start</code>
+            </div>
 
-            <p class="p-snippet">list out running services</p>
-            <code class="code-snippet">net start</code>
+            <div class="div-snippet">
+                <p class="p-snippet">generate hash of a file</p>
+                <code class="code-snippet">certutil -hashfile "C:\Users\Administrator\Desktop\tehee.txt" sha256</code>
+            </div>
 
-            <br>
-            <br>
+            <div class="div-snippet">
+                <p class="p-snippet">find system boot time</p>
+                <code class="code-snippet">systeminfo|find "Boot Time"</code>
+            </div>
 
-            <p class="p-snippet">generate hash of a file</p>
-            <code class="code-snippet">certutil -hashfile "C:\Users\Administrator\Desktop\tehee.txt" sha256</code>
+            <div class="div-snippet">
+                <p class="p-snippet">install specific Laravel</p>
+                <code class="code-snippet">composer create-project laravel/laravel="8.6.12" myproject</code>
+            </div>
 
-            <br>
-            <br>
+            <div class="div-snippet">
+                <p class="p-snippet">echoing text to file without quotes</p>
+                <code class="code-snippet">echo|set /p="Hello" > test.txt</code>
+            </div>
 
-            <p class="p-snippet">find system boot time</p>
-            <code class="code-snippet">systeminfo|find "Boot Time"</code>
+            <div class="div-snippet">
+                <p class="p-snippet">display current directory</p>
+                <code class="code-snippet">echo %cd%</code>
+            </div>
 
-            <br>
-            <br>
+            <div class="div-snippet">
+                <p class="p-snippet">fix gitignore not working</p>
+                <code class="code-snippet">git rm -r --cached .</code>
+                <code class="code-snippet">git add .</code>
+                <code class="code-snippet">git commit -m "fixed untracked files"</code>
+            </div>
 
-            <p class="p-snippet">install specific Laravel</p>
-            <code class="code-snippet">composer create-project laravel/laravel="8.6.12" myproject</code>
-            
-            <br>
-            <br>
+            <div class="div-snippet">
+                <p class="p-snippet">show list of Domain Accounts</p>
+                <code class="code-snippet">net users /domain</code>
+            </div>
 
-            <p class="p-snippet">echoing text to file without quotes</p>
-            <code class="code-snippet">echo|set /p="Hello" > test.txt</code>
+            <div class="div-snippet">
+                <p class="p-snippet">check current user connecting to server</p>
+                <code class="code-snippet">quser</code>
+                <p class="p-or">or</p>
+                <code class="code-snippet">quser /SERVER:172.16.1.10</code>
+            </div>
 
-            <br>
-            <br>
+            <div class="div-snippet">
+                <p class="p-snippet">get file associations, and program</p>
+                <code class="code-snippet">assoc .py</code>
+                <code class="code-snippet">ftype Python.File</code>
+            </div>
 
-            <p class="p-snippet">display current directory</p>
-            <code class="code-snippet">echo %cd%</code>
+            <div class="div-snippet">
+                <p class="p-snippet">Nmap network analysis</p>
+                <code class="code-snippet">nmap -sV -sC -O -n -oA nmapscan 192.168.0.1</code>
+            </div>
+
+            <div class="div-snippet">
+                <p class="p-snippet">show information about Windows activation</p>
+                <code class="code-snippet">slmgr /dli</code>
+            </div>
         </div>
 
         <div class="spacer"></div>
