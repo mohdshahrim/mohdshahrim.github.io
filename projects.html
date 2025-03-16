@@ -2,106 +2,153 @@
 <html lang='en'>
 
 <head>
-    <title>projects</title>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css'>
-    <link rel="stylesheet" href="style.css">
+    <title>mohdshahrim | projects</title>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta name="description" content="the official website of M. Shahrim" />
 </head>
 
-<body>
-    <main class="main-padding">
 
-        <!-- HEADER SECTION -->
-        <nav>
-            <a href="/" class="a-menu">Home</a>
-            <a href="projects.html" class="a-menu">Projects</a>
-            <a href="https://blog.mohdshahrim.com" class="a-menu">Blog</a>
-            <a href="snippets.html" class="a-menu">Snippets</a>
-        </nav>
-        <br>
-        <br>
-        <h1>Projects</h1>
-        <p class="p-about">More to come soon</p>
-        <br>
-        <br>
-        <br>
-        <h3>php-rat</h3>
-        <p>A simple remote access tool (RAT) for PHP. My naive attempt to learn and apply a RAT in PHP web. Only Windows-based environment has been produced. FOR LEARNING PURPOSE ONLY.</p>
-        <img src="img/phprat_01.png" width="40%" style="margin-right: 1em;">
-        <p>Source code can be found here <a href="https://github.com/mohdshahrim/php-rat">https://github.com/mohdshahrim/php-rat</a></p>
-        <br>
-        <br>
-        <br>
-        <h3>ClaimMaker</h3>
-        <p>A web application built on top of CodeIgniter 4. It is used to generate a PDF file of claim submission form. See demo here <a href="https://claimmaker.mohdshahrim.com/">https://claimmaker.mohdshahrim.com/</a></p>
-        <img src="img/claimmaker_01.PNG" width="40%" style="margin-right: 1em;">
-        <img src="img/claimmaker_02.PNG" width="40%">
-        <p>Source code can be found here <a href="https://github.com/mohdshahrim/claimmaker-demo">https://github.com/mohdshahrim/claimmaker-demo</a></p>
-    </main>
-</body>
 <style>
-    @media only screen  and (max-device-width: 1000px) and (orientation: portrait) {
-        .main-padding {
-            padding-left: 10px;
-        }
-        .profile > img {
-            transform: scale(0.9);
-        }
+    p {
+        font-size: 0.9em;
     }
-    .simple-message {
-        color: #f0f1f2;
-        background-color: #3f4042!important;
-        border: 1px dotted #6e7072;
-        padding: 1em;
-        border-radius: 10px;
-        position: relative;
-    }
-    .simple-message-close {
-        position: absolute;
-        top: 30px;
-        right: 10px;
-    }
-    .p-about {
-        color: #aaa;
-        display: block;
-        margin: 10px 0;
-        line-height: 0.8em;
-    }
-    .header {
-        display: flex;
-        padding-top: 50px;
-    }
-    .a-menu {
-        font-weight: bold;
-        display: inline-block;
-        margin-right: 1em;
-        color: #f0f1f2;
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 0.2em;
-    }
-    .profile {
-        flex: 1;
-        max-width: fit-content;
-        padding-right: 10px;
-    }
-    .profile img {
-        border-radius: 50%;
-    }
-    .caption {
-        flex: 1;
-    }
-    .footer-pad {
-        padding: 50px;
-    }
-    .footer-pad-text {
-        font-size: 0.8em;
+    header {
+        padding: 10px;
         text-align: center;
-        line-height: normal;
+    }
+
+    .content {
+        max-width: 600px;
+        margin: 5px auto;
+        padding: 5px 20px;
+    }
+    .text-header {
+        font-size: 1.5em;
+        margin-bottom:0;
+    }
+    .text-subheader {
+        font-size: 0.8em;
+    }
+    .p-linkbar {
+        font-size: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+    .span-link {
+        font-size: 1.3em;
+        margin-right:0.5em;
+        margin-left:0.5em;
+    }
+    .a-link:link {
+        color: red;
+    }
+    .a-link:visited {
+        color: red;
+    }
+    .p-title {
+        font-size: 0.8em;
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0.8em 0.5em;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+    .spacer {
+        height: 100px;
+        clear: both;
+    }
+    .div-snippet {
+        margin: 2.2em 0;
+    }
+    .p-snippet {
+        margin-bottom: 8px;
+    }
+    .p-or {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
+    .code-snippet {
+        border-radius: 5px;
+        background-color: #cbd5e1;
+        padding: 0.5em;
+        display: block;
+        word-break: break-all;
+    }
+
+
+
+    /* when screen is at least 600px, upscale every elements */
+    @media (min-width: 600px) {
+        p {
+            font-size: 125%;
+        }
+        .text-header {
+            font-size: 2.5em;
+            margin-bottom:0;
+        }
+        .text-subheader {
+            font-size: 1em;
+        }
+        .content {
+            padding: 40px 40px 20px 40px;
+        }
+        .p-title {
+            font-size: 100%;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0.8em 0.5em;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
     }
 </style>
+
+
+<body>
+    <main>
+        <header>
+            <h1 class="text-header">Mohamad Shahrim</h1>
+            <p class="text-subheader">a programmer from Sibu, Sarawak</p>
+        </header>
+
+        <div class="content">
+            <p class="p-linkbar">
+                <span class="span-link"><a class="a-link" href="/">home</a></span>
+                <span class="span-link"><a class="a-link" href="/projects.html">projects</a></span>
+                <span class="span-link"><a class="a-link" href="/snippets.html">snippets</a></span>
+            </p>
+        </div>
+        <div class="content">
+            <h3 style="font-family: Arial, Helvetica, sans-serif; margin-bottom: 0px;">Projects & </h3>
+            <p>personal projects I'm deeply invested in for the purpose of learning</p>
+        </div>
+
+        <div class="content">
+            <h2>php-rat</h2>
+            <p><a href="https://github.com/mohdshahrim/php-rat">https://github.com/mohdshahrim/php-rat</a></p>
+            <p>simple RAT in single PHP file</p>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="content">
+            <h2>Splitter</h2>
+            <p><a href="https://github.com/mohdshahrim/trimmer">https://github.com/mohdshahrim/trimmer</a></p>
+            <p>a CLI program written in Go that wraps around <b>ffmpeg</b> and <b>ffprobe</b> for me to easily split a video file into 1-minute each, so that I can post them on WhatsApp status later</p>
+            <p>(it was supposedly called Splitter but wrongly named Trimmer)</p>
+        </div>
+
+        <div class="spacer"></div>
+    </main>
+</body>
+
+
+<script>
+
+</script>
+
 
 </html>
