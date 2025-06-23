@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content=".jpg" />
+    <meta property="og:url" content="https://mohdshahrim.github.io/.html" />
+    <meta property="og:type" content="article" />
+    <title>How to use PurgeCSS</title>
+    <style>
+    .p-0y {
+        margin-top:0;
+        margin-bottom:0;
+        padding-top:0;
+        padding-bottom:0;
+    }
+    .spacer {
+        height: 100px;
+        clear: both;
+    }
+    </style>
+</head>
+<body>
+    <p class="p-0y">go back to <a href="/"><button>main</button></a></p>
+    <p class="p-0y">The Laksamana - official blog of M. Shahrim</p>
+    <br>
+    <h1>How to use PurgeCSS</h1>
+    <p>23/6/2025</p>
+
+    <br>
+
+    <p>It's a great satisfaction to include beautiful CSS library into our web projects. Unfortunately, such libraries are often huge in sizes, when in reality, we only want to apply styles just for few components (buttons, inputs) and want nothing for Cards or Tabs.</p>
+
+    <p>The obvious route to take is "treeshaking" - a standard practice these days. We can use Webpack, Vite or PostCSS to achieve it. But, my project is small and I feel like Vite is overkill.</p>
+
+    <p>Today I learned how to do it the simplest way, without having to resort to complex tools, in just 3 steps.</p>
+
+    <div class="spacer"></div>
+
+    <p>The objective of this lessson is to strip large CSS file, removing styles that we don't need. We are going to use <a href="https://purgecss.com/">PurgeCSS</a>. For the CSS library, we will use <a href="https://tabler.io/admin-template">Tabler</a>.</p>
+
+    <br>
+
+    <h3>Step 1: prepare these files</h3>
+
+    <ul>
+        <li>index.html</li>
+        <li>tabler.min.css (<a href="https://cdn.jsdelivr.net/npm/@tabler/core@1.3.2/dist/css/tabler.min.css">download here</a>)</li>
+    </ul>
+
+    <p>Don't include <b>tabler.min.css</b> in your HTML yet, instead, include this filename "output.css" (you'll see why). Try to style a button using Tabler.</p>
+
+    <div class="spacer"></div>
+
+    <h3>Step 2: install PurgeCSS globally</h3>
+
+    <p><code style="background-color:lightgray;padding:0.5em;">npm i -g purgecss</code></p>
+
+    <div class="spacer"></div>
+
+    <h3>Step 3: run PurgeCSS</h3>
+
+    <p>Run this command:</p>
+
+    <p><code style="background-color:lightgray;padding:0.5em;">purgecss --css tabler.min.css --content index.html -o output.css</code></p>
+
+    <p>A new CSS file will be produced, <b>output.css</b>, and because you already included it earlier in the HTML file, your page is now styled. The outputted CSS is the slimmed Tabler.</p>
+
+    <div class="spacer"></div>
+
+    <h3>Conclusion</h3>
+
+    <p>I applied the demonstration into this page and Tabler went from 514kb to 34kb!</p>
+
+    <p>Click <a href="/how-to-use-purgecss-styled.html">here</a> to see the styled version of this page using the said CSS.</p>
+
+    <p>Development tools does not have to be complex, bloated and overengineered. Even <a href="https://tailwindcss.com/docs/installation/tailwind-cli">Tailwind</a> has its own "just the CLI".</p>
+    
+    <p>If you know just what you need, and understand the modularity of complex tools, you can find them. Not following the industry is not a sin.</p>
+
+    <div class="spacer"></div>
+
+    <p class="profile-name-black">Mohamad Shahrim</p>
+    <p class="profile-name">author of The Laksamana</p>
+
+    <br>
+
+</body>
+</html>
