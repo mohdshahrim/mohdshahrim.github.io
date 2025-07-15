@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content=".jpg" />
+    <meta property="og:url" content="https://mohdshahrim.github.io/.html" />
+    <meta property="og:type" content="article" />
+    <link rel="stylesheet" href="7.css"/>
+    <script src="alpinejs.min.js" defer></script>
+    <style>
+        /* basic spacing */
+        .spacer {
+            height: 80px;
+        }
+
+        .mt-0 {
+            margin-top: 0;
+        }
+        .mb-0 {
+            margin-bottom: 0;
+        }
+        .mb-5 {
+            margin-bottom: 10px;
+        }
+
+        /* text-base */
+        .tb {
+            font-size: 1rem;
+        }
+
+        /* just to override font-size of input[type=radio]+label */
+        input[type=radio]+label {
+            font-size: 1rem;
+        }
+    </style>
+    <title>Are you IT literate?</title>
+</head>
+<body x-data="{score:0, q1:0, q2:0, q3:0, q4:0, q5:0, q6:0}">
+    <div class="window active" style="width: 100%;">
+        <div class="title-bar">
+            <div class="title-bar-text">The Laksamana</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize" disabled></button>
+                <button onclick="location.href='/'" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body has-space">
+            <h2 class="mt-0 mb-0">Are you IT literate?</h2>
+
+            <br>
+
+            <p>10/07/2025</p>
+
+            <br>
+
+            <p class="tb">Youtuber ThioJoe made a <a href="https://www.youtube.com/watch?v=nv2dNBizCRc">video</a> to test if a person is a computer expert or not.</p>
+            <p class="tb">I studied the contents, and I made it into a quiz fitted into this page, just for fun!</p>
+            <p class="tb">I rephrase it as "are you IT literate?"</p>
+            <p class="tb">So, ready when you are.</p>
+
+            <br>
+
+            <p class="tb">Your score <span style="font-size:larger; border:1px solid black; padding: 2px 8px;"><b x-text="score = q1 + q2 + q3 + q4 + q5 + q6">0</b></span></p>
+
+            <br>
+
+            <!-- Q1 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>1. Do you know what Operating System you're using?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q1-1" type="radio" x-on:click="q1=-999" name="q1">
+                        <label for="q1-1" class="tb">I don't know</label>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="radio6" type="radio" x-on:click="q1=1" name="q1">
+                        <label for="radio6" class="tb">Windows</label>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q1-3" type="radio" x-on:click="q1=-2" name="q1">
+                        <label for="q1-3" class="tb">Mac</label>
+                    </div>
+                    <div class="field-row tb">
+                        <input id="q1-4" type="radio" class="tb" x-on:click="q1=5" name="q1">
+                        <label for="q1-4" class="tb">Linux</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q2 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>2. Do you know what version Operating System you're using?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q2-1" type="radio" x-on:click="q2=1" name="q2">
+                        <label for="q2-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q2-2" type="radio" x-on:click="q2=0" name="q2">
+                        <label for="q2-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q3 -->
+            <div>
+                <fieldset>
+                    <div class="field-row">
+                        <img src="q3.jpeg"/>
+                    </div>
+                    <div class="field-row">
+                        <p class="tb"><b>3. Do you know what this is?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q3-1" type="radio" name="q3" x-on:click="q3=1">
+                        <label for="q3-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q3-2" type="radio" name="q3" x-on:click="q3=0">
+                        <label for="q3-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q4 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>4. Are you someone who asks others for computer help?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q4-1" type="radio" x-on:click="q4=-1" name="q4">
+                        <label for="q4-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q4-2" type="radio" x-on:click="q4=0" name="q4">
+                        <label for="q4-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q5 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>5. Are you someone who gives computer help?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q5-1" type="radio" x-on:click="q5=1" name="q5">
+                        <label for="q5-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q5-2" type="radio" x-on:click="q5=0" name="q5">
+                        <label for="q5-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q6 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>6. Are you a hunt-and-peck typer?</b> (meaning: you don't know how to properly type on the keyboard)</p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q6-1" type="radio" x-on:click="q6=-5" name="q6">
+                        <label for="q6-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q6-2" type="radio" x-on:click="q6=0" name="q6">
+                        <label for="q6-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- SPACER -->
+            <br>
+
+            <div class="spacer"></div>
+
+        </div>
+    </div>
+</body>
+</html>
