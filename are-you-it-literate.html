@@ -38,7 +38,7 @@
     </style>
     <title>Are you IT literate?</title>
 </head>
-<body x-data="{score:0, q1:0, q2:0, q3:0, q4:0, q5:0, q6:0}">
+<body x-data="{score:0, q1:0, q2:0, q3:0, q4:0, q5:0, q6:0, q7:0, q8:0, q9:0, q10:0, q11:0, q12:0, q13:0}">
     <div class="window active" style="width: 100%;">
         <div class="title-bar">
             <div class="title-bar-text">The Laksamana</div>
@@ -58,13 +58,13 @@
             <br>
 
             <p class="tb">Youtuber ThioJoe made a <a href="https://www.youtube.com/watch?v=nv2dNBizCRc">video</a> to test if a person is a computer expert or not.</p>
-            <p class="tb">I studied the contents, and I made it into a quiz fitted into this page, just for fun!</p>
+            <p class="tb">I studied the contents, and turned it into a quiz in this page, just for fun!</p>
             <p class="tb">I rephrase it as "are you IT literate?"</p>
-            <p class="tb">So, ready when you are.</p>
+            <p class="tb">Only 21 questions. So, ready when you are.</p>
 
             <br>
 
-            <p class="tb">Your score <span style="font-size:larger; border:1px solid black; padding: 2px 8px;"><b x-text="score = q1 + q2 + q3 + q4 + q5 + q6">0</b></span></p>
+            <p class="tb">Your score <span style="font-size:larger; border:1px solid black; padding: 2px 8px;"><b x-text="score = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13">0</b></span></p>
 
             <br>
 
@@ -185,8 +185,157 @@
                         <label for="q6-1" class="tb">Yes</label>
                     </div>
                     <div class="field-row">
-                        <input id="q6-2" type="radio" x-on:click="q6=0" name="q6">
+                        <input id="q6-2" type="radio" x-on:click="q6=5" name="q6">
                         <label for="q6-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q7 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>7. Do you know how big your hard drive is?</b> (in gigabytes)</p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q7-1" type="radio" x-on:click="q7=1" name="q7">
+                        <label for="q7-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q7-2" type="radio" x-on:click="q7=-1" name="q7">
+                        <label for="q7-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q8 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>8. Do you know your current screen resolution?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q8-1" type="radio" x-on:click="q8=1" name="q8">
+                        <label for="q8-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q8-2" type="radio" x-on:click="q8=-1" name="q8">
+                        <label for="q8-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q9 -->
+            <div>
+                <fieldset x-data="{ q9open: false, q9cores: 4 }">
+                    <div class="field-row tb">
+                        <p class="tb"><b>9. Do you know how many cores your CPU has?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q9-1" type="radio" x-on:click="q9=-1" name="q9">
+                        <label for="q9-1" class="tb">I don't know</label>
+                    </div>
+                    <div class="field-row mb-5">
+                        <div>
+                            <input id="q9-2" type="radio" x-on:click="q9open = !q9open; q9=q9cores*0.5;" name="q9">
+                            <label for="q9-2" class="tb">Yes I know <span x-show="q9open">&nbsp;(I have <span x-text="q9cores"></span> cores)</span></label>
+                        </div>
+                    </div>
+
+                    <div x-show="q9open">
+                        <div class="field-row" style="max-width: 300px">
+                            <label>Cores:</label>
+                            <label>2</label>
+                            <input type="range" min="2" max="32" value="4" step="2"
+                                x-on:change="
+                                q9cores=$el.value;
+                                q9=q9cores * 0.5;
+                                "/>
+                            <label>32</label>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q10 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>10. Do you still use your computer's default browser?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q10-1" type="radio" x-on:click="q10=-1" name="q10">
+                        <label for="q10-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q10-2" type="radio" x-on:click="q10=1" name="q10">
+                        <label for="q10-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q11 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>11. Have you ever opened up your computer case?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q11-1" type="radio" x-on:click="q11=2" name="q11">
+                        <label for="q11-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q11-2" type="radio" x-on:click="q11=-2" name="q11">
+                        <label for="q11-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q12 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>12. Have you ever used Linux?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q12-1" type="radio" x-on:click="q12=2" name="q12">
+                        <label for="q12-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q12-2" type="radio" x-on:click="q12=-2" name="q12">
+                        <label for="q12-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q13 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>13. Do you back up your hard drive?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q13-1" type="radio" x-on:click="q13=1" name="q13">
+                        <label for="q13-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q13-2" type="radio" x-on:click="q13=-1" name="q13">
+                        <label for="q13-2" class="tb">No</label>
                     </div>
                 </fieldset>
             </div>
