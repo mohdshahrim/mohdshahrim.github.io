@@ -38,7 +38,7 @@
     </style>
     <title>Are you IT literate?</title>
 </head>
-<body x-data="{score:0, q1:0, q2:0, q3:0, q4:0, q5:0, q6:0, q7:0, q8:0, q9:0, q10:0, q11:0, q12:0, q13:0}">
+<body x-data="{score:0, q1:0, q2:0, q3:0, q4:0, q5:0, q6:0, q7:0, q8:0, q9:0, q10:0, q11:0, q12:0, q13:0, q14:0, q15:0, q16:0, q17:0, q18:0, q19:0, q20:0, q21:0, q22:0, q23:0, q24:0, q25:0, q26:0, q27:0, q28a:0, q28b:0, q28c:0, q28d:0, q28e:0, q28f:0, q28g:0, q28h:0, q29:0, q30:0, q31:0, q32:0, q33:0, q34:0, q35:0}">
     <div class="window active" style="width: 100%;">
         <div class="title-bar">
             <div class="title-bar-text">The Laksamana</div>
@@ -60,11 +60,11 @@
             <p class="tb">Youtuber ThioJoe made a <a href="https://www.youtube.com/watch?v=nv2dNBizCRc">video</a> to test if a person is a computer expert or not.</p>
             <p class="tb">I studied the contents, and turned it into a quiz in this page, just for fun!</p>
             <p class="tb">I rephrase it as "are you IT literate?"</p>
-            <p class="tb">Only 21 questions. So, ready when you are.</p>
+            <p class="tb">Only 34 questions. So, ready when you are.</p>
 
             <br>
 
-            <p class="tb">Your score <span style="font-size:larger; border:1px solid black; padding: 2px 8px;"><b x-text="score = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13">0</b></span></p>
+            <p class="tb">Your score <span style="font-size:larger; border:1px solid black; padding: 2px 8px;"><b x-text="score = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14 + q15 + q16 + q17 + q18 + q19 + q20 + q21 + q22 + q23 + q24 + q25 + q26 + q27 + q28a + q28b + q28c + q28d + q28e + q28f + q28g + q28h + q29 + q30 + q31 + q32 + q33 + q34 + q35"></b></span></p>
 
             <br>
 
@@ -334,11 +334,444 @@
                         <label for="q13-1" class="tb">Yes</label>
                     </div>
                     <div class="field-row">
-                        <input id="q13-2" type="radio" x-on:click="q13=-1" name="q13">
+                        <input id="q13-2" type="radio" x-on:click="q13=-3" name="q13">
                         <label for="q13-2" class="tb">No</label>
                     </div>
                 </fieldset>
             </div>
+
+            <br>
+
+            <!-- Q14 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>14. Do you know whether your computer is Intel or AMD?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q14-1" type="radio" x-on:click="q14=1" name="q14">
+                        <label for="q14-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q14-2" type="radio" x-on:click="q14=-1" name="q14">
+                        <label for="q14-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q15 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>15. Have you ever changed your browser homepage?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q15-1" type="radio" x-on:click="q15=1" name="q15">
+                        <label for="q15-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q15-2" type="radio" x-on:click="q15=-1" name="q15">
+                        <label for="q15-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <blockquote>Alright now things might start picking up a little bit...</blockquote>
+
+            <br>
+
+            <!-- Q16 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>16. Have you ever changed your Wi-Fi password from the default?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q16-1" type="radio" x-on:click="q16=2" name="q16">
+                        <label for="q16-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q16-2" type="radio" x-on:click="q16=0" name="q16">
+                        <label for="q16-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q17 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>17. Do you know what USB stands for?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q17-1" type="radio" x-on:click="q17=2" name="q17">
+                        <label for="q17-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q17-2" type="radio" x-on:click="q17=0" name="q17">
+                        <label for="q17-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q18 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>18. Do you know the difference between a <u>megabit</u> and a <u>megabyte?</u></b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q18-1" type="radio" x-on:click="q18=1" name="q18">
+                        <label for="q18-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q18-2" type="radio" x-on:click="q18=0" name="q18">
+                        <label for="q18-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q19 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>19. How many hours do you spend on the computer daily on average?</b> (not counting when you are working)</p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <label><span x-text="q19"></span> hours</label>
+                        <input id="q19-1" type="range" min="0" max="24" step="1" value="0" x-on:mousedown="q19=parseInt($el.value)"/>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q20 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>20. Have you ever used the command prompt?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q20-1" type="radio" x-on:click="q20=2" name="q20">
+                        <label for="q20-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q20-2" type="radio" x-on:click="q20=0" name="q20">
+                        <label for="q20-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q21 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>21. Do you know the difference between Java and Javascript?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q21-1" type="radio" x-on:click="q21=1" name="q21">
+                        <label for="q21-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q21-2" type="radio" x-on:click="q21=0" name="q21">
+                        <label for="q21-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q22 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>22. Do your passwords contain special characters?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q22-1" type="radio" x-on:click="q22=1" name="q22">
+                        <label for="q22-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q22-2" type="radio" x-on:click="q22=0" name="q22">
+                        <label for="q22-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q23 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>23. Have you ever installed new hardware in your computer?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q23-1" type="radio" x-on:click="q23=3" name="q23">
+                        <label for="q23-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q23-2" type="radio" x-on:click="q23=0" name="q23">
+                        <label for="q23-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q24 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>24. Do you know the difference between HTTP and HTTPS?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q24-1" type="radio" x-on:click="q24=1" name="q24">
+                        <label for="q24-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q24-2" type="radio" x-on:click="q24=0" name="q24">
+                        <label for="q24-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q25 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>25. Have you ever built a computer?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q25-1" type="radio" x-on:click="q25=4" name="q25">
+                        <label for="q25-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q25-2" type="radio" x-on:click="q25=0" name="q25">
+                        <label for="q25-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q26 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>26. Have you ever overclocked your CPU manually?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q26-1" type="radio" x-on:click="q26=5" name="q26">
+                        <label for="q26-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q26-2" type="radio" x-on:click="q26=0" name="q26">
+                        <label for="q26-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q27 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>27. Do you know what RAM timings are and how they work?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q27-1" type="radio" x-on:click="q27=3" name="q27">
+                        <label for="q27-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q27-2" type="radio" x-on:click="q27=0" name="q27">
+                        <label for="q27-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q28 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>28. Tick if you know these famous computer people :</b></p>
+                    </div>
+                    <div class="field-row mb5">
+                        <input type="checkbox" id="q28-a" x-on:change="if ($el.checked) {q28a=1} else {q28a=0}"><label for="q28-a">Steve Wozniak</label>
+                    </div>
+                    <div class="field-row mb5">
+                        <input type="checkbox" id="q28-b" x-on:change="if ($el.checked) {q28b=1} else {q28b=0}"><label for="q28-b">Dennie Ritchie</label>
+                    </div>
+                    <div class="field-row mb5">
+                        <input type="checkbox" id="q28-c" x-on:change="if ($el.checked) {q28c=1} else {q28c=0}"><label for="q28-c">Richard Stallman</label>
+                    </div>
+                    <div class="field-row mb5">
+                        <input type="checkbox" id="q28-d" x-on:change="if ($el.checked) {q28d=1} else {q28d=0}"><label for="q28-d">Grace Hopper</label>
+                    </div>
+                    <div class="field-row mb5">
+                        <input type="checkbox" id="q28-e" x-on:change="if ($el.checked) {q28e=1} else {q28e=0}"><label for="q28-e">Kevin Mitnick</label>
+                    </div>
+                    <div class="field-row mb5">
+                        <input type="checkbox" id="q28-f" x-on:change="if ($el.checked) {q28f=1} else {q28f=0}"><label for="q28-f">Linus Torvalds</label>
+                    </div>
+                    <div class="field-row mb5">
+                        <input type="checkbox" id="q28-g" x-on:change="if ($el.checked) {q28g=1} else {q28g=0}"><label for="q28-g">John Carmack</label>
+                    </div>
+                    <div class="field-row mb5">
+                        <input type="checkbox" id="q28-h" x-on:change="if ($el.checked) {q28h=-10} else {q28h=0}"><label for="q28-h">Christopher Zeckhauser</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q29 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>29. Do you know what the Insert key does?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q29-1" type="radio" x-on:click="q29=1" name="q29">
+                        <label for="q29-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q29-2" type="radio" x-on:click="q29=0" name="q29">
+                        <label for="q29-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q30 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>30. Do you know what the scroll lock key does?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q30-1" type="radio" x-on:click="q30=3" name="q30">
+                        <label for="q30-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q30-2" type="radio" x-on:click="q30=0" name="q30">
+                        <label for="q30-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q31 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>31. Have you not had a computer virus in the past 6 months?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q31-1" type="radio" x-on:click="q31=3" name="q31">
+                        <label for="q31-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q31-2" type="radio" x-on:click="q31=0" name="q31">
+                        <label for="q31-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q32 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>32. Do you not need Antivirus?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q32-1" type="radio" x-on:click="q32=-5" name="q32">
+                        <label for="q32-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q32-2" type="radio" x-on:click="q32=5" name="q32">
+                        <label for="q32-2" class="tb">No, I need Antivirus</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q33 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>33. Do you encrypt your hard drive?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q33-1" type="radio" x-on:click="q33=4" name="q33">
+                        <label for="q33-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q33-2" type="radio" x-on:click="q33=0" name="q33">
+                        <label for="q33-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+
+            <!-- Q34 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>34. Do you have a home server?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q34-1" type="radio" x-on:click="q34=5" name="q34">
+                        <label for="q34-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q34-2" type="radio" x-on:click="q34=0" name="q34">
+                        <label for="q34-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Q35 -->
+            <div>
+                <fieldset>
+                    <div class="field-row tb">
+                        <p class="tb"><b>35. Have you ever edited the Windows registry?</b></p>
+                    </div>
+                    <div class="field-row mb-5">
+                        <input id="q35-1" type="radio" x-on:click="q35=5" name="q35">
+                        <label for="q35-1" class="tb">Yes</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="q35-2" type="radio" x-on:click="q35=0" name="q35">
+                        <label for="q35-2" class="tb">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
 
             <!-- SPACER -->
             <br>
