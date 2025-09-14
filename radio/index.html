@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="radio/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="../alpinejs.min.js" defer></script>
     <title>BurstFM - the hits just keep on coming</title>
 </head>
@@ -12,9 +12,9 @@
         mainIndex: 0,
         intervalAudio: new Audio('./radio/bell.ogg'),
         mainAudios: [
-            new Audio('./radio/1.ogg'),
-            new Audio('./radio/2.ogg'),
-            new Audio('./radio/1.ogg'),
+            new Audio('1.ogg'),
+            new Audio('2.ogg'),
+            new Audio('1.ogg'),
         ],
         togglePlay() {
             if (this.isPlaying) {
@@ -91,7 +91,7 @@
         <p class="text-stone-200 text-center">the hits just keep on coming</p>
         <!-- radio player region -->
         <div class="size-50 bg-stone-950 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <img class="rounded-full" src="/radio/me.jpg"/>
+            <img class="rounded-full" src="me.jpg"/>
         </div>
     </div>
 
