@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="The Laksamana" />
+        <meta property="og:description" content="official blog of M. Shahrim" />
+        <meta property="og:image" content=".jpg" />
+        <meta property="og:url" content="https://mohdshahrim.github.io/.html" />
+        <meta property="og:type" content="article" />
+
+        <script src="alpinejs.min.js" defer></script>
+
+        <title>Where do camels come from?</title>
+        <style>
+            body {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .p-0y {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .spacer {
+                height: 100px;
+                clear: both;
+            }
+            .subhead {
+                font-size: larger;
+            }
+            .bg-grey {
+                background-color: #eeeeee;
+                padding: 6px 2px;
+            }
+            .text-gray {
+                color: gray;
+            }
+
+            /*
+                Recreate of Wikipedia-style of displaying image
+                Last updated: 25 January 2026
+
+                Example:
+
+                <div class="wk-div wk-div-50">
+                    <img class="wk-img" src="img/foobar.jpg" height="250px" loading="lazy"/>
+                    <figcaption>Lorem ipsum dolor si amet</figcaption>
+                </div>
+            */
+            .wk-div {
+                border: 1px solid #c8ccd1;
+                background-color: #f8f9fa;
+                padding: 1em 1em 1.5em 1em;
+                margin: auto;
+            }
+            /* width modifier */
+            .wk-div-50 {
+                width: 50%;
+            }
+            .wk-div-75 {
+                width: 75%;
+            }
+            .wk-img {
+                border: 1px solid #c8ccd1;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            .wk-div > figcaption {
+                padding-top: 6px;
+                color: #202122;
+            }
+
+            /* UTILITIES */
+            .display-block {
+                display: block;
+            }
+            .width-full {
+                width: 100%;
+            }
+
+            /* SPECIFIC ONLY TO THIS PAGE */
+            .h-2rem {
+                height: 2rem;
+            }
+        </style>
+    </head>
+    <body x-data="{
+        feedback1:'',
+        feedback2:'',
+        get feedback_style(){if(this.answer==false){return this.color_red;}else{return this.color_green;}},
+        changeButtonColor() {
+            this.button_correct='color:green;';
+            this.button_false='color:red;';
+        },
+        color_red:'color:red;',
+        color_green:'color:green;',
+        answer:false,
+        explanation:false,
+        button_correct:'color:black;',
+        button_false:'color:black;',
+    }">
+        <div>
+            <div style="width: 70%; float: left;">
+                <p class="p-0y text-gray">The Laksamana</p>
+                <p class="p-0y text-gray">official blog of M. Shahrim</p>
+            </div>
+            <div style="width: 30%; float: right;">                
+                <a href="/" class="display-block width-full" style="text-decoration: none;">
+                    <button class="display-block width-full" style="height: 2rem; border-radius: 5px;">main</button>
+                </a>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <h1>Where do camels come from?</h1>
+
+        <p class="subhead">
+            the rarely known stories of some natures' origin
+        </p>
+
+        <br>
+
+        <p>8 Mar 2026</p>
+
+        <br>
+        <br>
+
+        <p>Just ask anybody: <b>Where do dogs come from?</b> and people will simply answer: <b>"oh, they come from domesticated wolves, somewhen thousand of years ago"</b>.</p>
+
+        <p>Correct.</p>
+
+        <p>The same could be said about <i>felis catus</i> (house cats). They descended from wild cats, like <i>felis sylvestris</i>. When humans begin to live in proper houses and they keep wheats there, this attract rats. With the presence of rats, wild cats drew closer to game the rats, thus establishing domestication.</p>
+
+        <div>
+            <img class="wk-img" src="img/17-0.jpg" width="100%" loading="lazy"/>
+        </div>
+
+        <p>Even without extensive reading about the origin of cats and dogs, we all knew some common and basic facts. Perhaps it was pretty obvious.</p>
+
+        <p>But there are things about nature that isn't obvious or commonly known.</p>
+
+        <div class="spacer"></div>
+
+        <h3>Camels and The Middle East</h3>
+
+        <p>Middle East and camels. They go hand in hand.</p>
+
+        <p>We are not to be blamed for this association. The presence of camels in the 1999 film <i>The Mummy</i> or <i>Indiana Jones Raiders of The Lost Ark</i> is one of many stereotypes reinforcement.</p>
+
+        <div>
+            <img class="wk-img" src="img/17-1.jpg" width="100%" loading="lazy"/>
+        </div>
+
+        <p>As conventional as it may be, <b>camels actually isn't endemic to the Middle East or North Africa</b>, at least not in the first place.</p>
+
+        <p>Yes, you read that right. Camels came from other continent, faaar away.</p>
+
+        <p>But, before we go further, I must remind you that this phenomena is completely natural and nothing strange.</p>
+
+        <p><b>So where do camels originate from?</b></p>
+
+        <div>
+            <div>
+                <table class="width-full">
+                    <colgroup>
+                        <col style="width:50%;"></col>
+                        <col style="width:50%;"></col>
+                    </colgroup>
+                    <tr>
+                        <td>
+                            <button class="width-full h-2rem" x-on:click="answer=false;explanation=true;feedback1='There are camels in North Africa, but that\'s not where they originate from';changeButtonColor();" x-bind:style="button_false">Africa</button>
+                        </td>
+                        <td>
+                            <button class="width-full h-2rem" x-on:click="answer=false;explanation=true;feedback1='Camels are built for large open lands and not tropical jungle like Southeast Asia.';changeButtonColor();" x-bind:style="button_false">Southeast Asia</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="width-full h-2rem" x-on:click="answer=true;explanation=true;feedback1='Correct!';changeButtonColor();" x-bind:style="button_correct">North America</button>
+                        </td>
+                        <td>
+                            <button class="width-full h-2rem" x-on:click="answer=false;explanation=true;feedback1='Camels that are found in Australia are brought by humans (introduced)';changeButtonColor();" x-bind:style="button_false">Australia</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div x-text="feedback1" x-bind:style="feedback_style">
+
+            </div>
+        </div>
+
+        <span x-show="explanation">
+            <p>
+                Around 40-50 million years ago, proto camels lived in North America. Proto means primitive. Then, between 7.5-6.5 million years ago, the ancestors of modern camel migrated into Eurasia (Europe + Asia). Some camel cousins (llamas and alpacas) migrated to South America instead.
+            </p>
+            <p>
+                Sadly there are no more camels left (extint) in North America, along with horses, mammoths and sabertooh tigers.
+            </p>
+        </span>
+
+        <br>
+
+        <div class="spacer"></div>
+
+        <h3>Nature is amazing</h3>
+
+        <div>
+            <img class="wk-img" src="img/17-2.gif" width="100%" loading="lazy"/>
+        </div>
+
+        <p>Well said Ron.</p>
+
+        <p>When I discovered this story, it strucked me and made me rethink "where do all of the things around us came from?". We took them for granted.</p>
+
+        <p>If you research on your own, you may discover such as:</p>
+
+        <ul>
+            <li>Chicken = Southeast Asia</li>
+            <li>Banana = New Guinea, Southeast Asia</li>
+            <li>Chilli = Peru, South America</li>
+            <li>Potato = also Peru and Bolivia, South America</li>
+            <li>Coffee = Ethiopia, East Africa</li>
+            <li>Tea = borderland China and northern Myanmar</li>
+        </ul>
+
+        <div>
+            <img class="wk-img" src="img/17-3.png" width="100%" loading="lazy"/>
+        </div>
+
+        <p>I might as well create a Github repo to curate this list. Call it <a href="https://github.com/topics/awesome-list">Awesome</a> Origins.</p>
+
+        <p>Alas, camels are awesome. There are even <a href="https://www.thelastdialogue.org/article/the-topic-camel-mentioned-in-quran/">mentions about camels in the Quran</a> and in the Hadith (quotes from Prophet Muhammad peace be upon him).</p>
+
+        <blockquote>Then do they not look at the camels - how they are created? (Quran 88:17)</blockquote>
+
+        <div class="spacer"></div>
+
+        <p class="profile-name-black">Mohamad Shahrim</p>
+        <p class="profile-name">author of The Laksamana</p>
+        <img src="img/notbyai.svg" />
+    </body>
+</html>
