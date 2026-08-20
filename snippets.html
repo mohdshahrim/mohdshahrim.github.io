@@ -175,6 +175,14 @@
                 <code class="code-snippet">wmic logicaldisk get deviceid, volumename, description</code>
             </div>
 
+            <div class="div-snippet">
+                <p class="p-snippet">setting up OpenSSH</p>
+                <code class="code-snippet">Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0</code>
+                <code class="code-snippet">Start-Service sshd</code>
+                <code class="code-snippet">Set-Service -Name sshd -StartupType 'Automatic'</code>
+                <code class="code-snippet">Get-NetFirewallRule -Name *ssh*</code>
+            </div>
+
             <div class="spacer"></div>
 
             <p class="center">
