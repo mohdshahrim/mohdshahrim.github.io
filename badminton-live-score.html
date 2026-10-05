@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="The Laksamana" />
+        <meta property="og:description" content="official blog of M. Shahrim" />
+        <meta property="og:image" content=".jpg" />
+        <meta property="og:url" content="https://mohdshahrim.github.io/.html" />
+        <meta property="og:type" content="article" />
+        <script src="alpinejs.min.js" defer></script>
+        <title>Badminton live score</title>
+        <style>
+            body {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .p-0y {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .spacer {
+                height: 100px;
+                clear: both;
+            }
+            .subhead {
+                font-size: larger;
+            }
+            .bg-grey {
+                background-color: #eeeeee;
+                padding: 6px 2px;
+            }
+            .text-gray {
+                color: gray;
+            }
+
+            /*
+                Recreate of Wikipedia-style of displaying image
+                Last updated: 25 January 2026
+
+                Example:
+
+                <div class="wk-div wk-div-50">
+                    <img class="wk-img" src="img/foobar.jpg" height="250px" loading="lazy"/>
+                    <figcaption>Lorem ipsum dolor si amet</figcaption>
+                </div>
+            */
+            .wk-div {
+                border: 1px solid #c8ccd1;
+                background-color: #f8f9fa;
+                padding: 1em 1em 1.5em 1em;
+                margin: auto;
+            }
+            /* width modifier */
+            .wk-div-50 {
+                width: 50%;
+            }
+            .wk-div-75 {
+                width: 75%;
+            }
+            .wk-img {
+                border: 1px solid #c8ccd1;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            .wk-div > figcaption {
+                padding-top: 6px;
+                color: #202122;
+            }
+
+            /* UTILITIES */
+            .display-block {
+                display: block;
+            }
+            .width-full {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body x-data="{
+            current:0,
+            dis_prev:false,
+            imgs:['img/22-3.png','img/22-4.png','img/22-6.png','img/22-7.png'],
+            imgtxt:[
+                'You can register and manage matches',
+                'Organizations are managed here',
+                'Here you can add and edit Teams',
+                'Players are registered here',
+            ],
+            checkCurrent(){
+                // loop the array
+                if (this.current<0) {
+                    this.current=this.imgs.length - 1;
+                }
+                if (this.current>3) {
+                    this.current=0;
+                }
+            }
+        }">
+        <div>
+            <div style="width: 70%; float: left;">
+                <p class="p-0y text-gray">The Laksamana</p>
+                <p class="p-0y text-gray">official blog of M. Shahrim</p>
+            </div>
+            <div style="width: 30%; float: right;">                
+                <a href="/" class="display-block width-full" style="text-decoration: none;">
+                    <button class="display-block width-full" style="height: 2rem; border-radius: 5px;">main</button>
+                </a>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <h1>Badminton live score</h1>
+
+        <br>
+
+        <p>3 Oct 2026</p>
+
+        <br>
+
+        <p>In conjunction with International Day of Forests 2025, our company hosted a 2-day badminton tournament.</p>
+
+        <p>I am one of the committee members responsible for planning, preparing and executing the event.</p>
+
+        <p>As the only person with zero knowledge about badmintons (and partly because I am an IT guy), I was given the easy role - stay close with laptops and play some audio when asked to.</p>
+
+        <p>Although not in the original assignment, I pitched to the team that I could come up with some creative ways to display scores and information, live.</p>
+
+        <p>With just one week to prepare the prototype, I showed to them, the badminton live score display system.</p>
+
+        <p>I call it, <b>badcourt</b>.</p>
+
+        <div>
+            <img class="wk-img" src="img/22-0.jpg" width="100%" loading="lazy"/>
+        </div>
+
+        <div class="spacer"></div>
+
+        <p>The main & live dashboard, projected on the screen</p>
+
+        <div>
+            <img class="wk-img" src="img/22-1.png" width="100%" loading="lazy"/>
+        </div>
+
+        <div class="spacer"></div>
+
+        <p>This is where scorekeeper controls the scoring. Changes made here are instantly shown to the live dashboard.</p>
+
+        <div>
+            <img class="wk-img" src="img/22-2.png" width="100%" loading="lazy"/>
+        </div>
+
+        <div class="spacer"></div>
+
+
+
+        <p x-text="imgtxt[current]"></p>
+
+        <div>
+            <button x-on:click="current--; checkCurrent();" x-bind:disabled="dis_prev">prev</button>
+            <button x-on:click="current++; checkCurrent()">next</button>
+        </div>
+
+        <div>
+            <img class="wk-img" x-bind:src="imgs[current]" width="100%" loading="lazy"/>
+        </div>
+
+        <div class="spacer"></div>
+
+        <h3>Architecture</h3>
+
+        <p>The trick to achieve continuous update is simply this code below, embedded in the dashboard page. It runs every 0.9 second to make GET request to "/livescore/get", which will respond with JSON data containing information for each court observed.</p>
+
+        <div>
+            <img class="wk-img" src="img/22-8.png" width="100%" loading="lazy"/>
+        </div>
+
+        <p>For the server, we configured PHP-FPM (FastCGI Process Manager) behind NGINX to allow greater performance. For our purpose, this is good enough.</p>
+
+        <p>Here is the link to <b>badcourt</b> source code: <a href="https://github.com/mohdshahrim/badcourt">https://github.com/mohdshahrim/badcourt</a></p>
+
+        <div class="spacer"></div>
+
+        <p>references</p>
+        <p><a href="https://www.jayatiasa.net/badminton-tournament-2025-jth-clinches-second-runner-up-spot/">https://www.jayatiasa.net/badminton-tournament-2025-jth-clinches-second-runner-up-spot/</a></p>
+
+        <div class="spacer"></div>
+
+        <p class="profile-name-black">Mohamad Shahrim</p>
+        <p class="profile-name">author of The Laksamana</p>
+        <img src="img/notbyai.svg" />
+    </body>
+</html>
